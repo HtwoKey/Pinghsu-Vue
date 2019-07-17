@@ -1,0 +1,66 @@
+<template>
+<div id="Index">
+  <!-- 加载动画组件 -->
+  <app-loading v-if="dataLoading"></app-loading>
+  <div class="main-content archive-page clearfix">
+    <div class="categorys-item" v-for="(t,index) in times" :key="index">
+      <div class="categorys-title">{{t.month}}</div>
+      <div class="post-lists">
+        <div class="post-lists-body">
+          <div class="post-list-item" v-for="(item,index) in list" :key="index" v-if="item.month === t.month" >
+            <div class="post-list-item-container" >
+              <div class="item-label">
+                <div class="item-title">
+                  <router-link :to="{'path':'/article/'+item.id }">{{item.title}}</router-link>
+                </div>
+                <div class="item-meta clearfix">
+                  <div class="item-meta-date"> {{item.created | dateFormat}} </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</template>
+
+<script>
+    import {archives} from "../api/article";
+    import {dateFormat} from "../utils/common";
+
+    export default {
+        name: "timeLine",
+
+        data(){
+          return{
+            dataLoading:true,
+            times:{},
+            list:{},
+          }
+        },
+        mounted(){
+          document.getElementsByTagName("body")[0].className="bg-grey";
+        },
+        created(){
+          this.fetchData()
+        },
+        methods:{
+          fetchData() {
+            this.listLoading = true;
+            archives().then(response => {
+              this.times = response.time;
+              this.list = response.item;
+              this.listLoading = false;
+            })
+          },
+        },
+        filters:{ //时间的格式化过滤器
+          dateFormat(time){
+            return dateFormat(time)
+          }
+        }
+    }
+</script>
+
