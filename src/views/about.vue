@@ -10,8 +10,8 @@
       <h3>Hello,World</h3>
       <p>我是‘两把钥匙’（笔名），JavaWeb攻城狮。</p>
       <p>坐标：'104.053394,30.679201'</p>
-      <p>技能：Java、Python、Vue、Delphi、MySQL、Oracle、Web</p>
-      <p>爱好：慢跑、爬山、自行车、编程、摄影、文学、电子音乐</p>
+      <p>技能：Java、JavaScript、Python、Vue、MySQL、SQL Server、</p>
+      <p>爱好：慢跑、爬山、自行车、编程、摄影、文学、音乐</p>
       <h3>联系方式</h3>
       <ul>
         <li><p><a href="https://github.com/HtwoKey" target="_blank">GitHub</a></p></li>

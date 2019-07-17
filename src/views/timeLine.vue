@@ -48,11 +48,11 @@
         },
         methods:{
           fetchData() {
-            this.listLoading = true;
+            this.dataLoading = true;
             archives().then(response => {
               this.times = response.time;
               this.list = response.item;
-              this.listLoading = false;
+              this.dataLoading = false;
             })
           },
         },
