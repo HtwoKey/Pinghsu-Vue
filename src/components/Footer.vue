@@ -14,7 +14,7 @@
     <div class="app-footer-meta">
       <div class="app-footer-container">
         <div class="app-footer-info">
-          <p>© 2019 HTwoKey All Rights Reserved · <a href="http://www.beian.miit.gov.cn" target="_blank" rel="nofollow">蜀ICP备18018751号</a> | Powered by java | Theme by
+          <p>© {{year}} HTwoKey <a href="http://www.beian.miit.gov.cn" target="_blank" rel="nofollow">蜀ICP备18018751号</a> | Powered by java | Theme by
             <a href="https://github.com/chakhsu/pinghsu" target="_blank" rel="nofollow">pinghsu</a>
           </p>
         </div>
@@ -24,6 +24,23 @@
 </template>
 
 <script>
+export default {
+  name: 'footer',
+  data(){
+    return{
+      year:''
+    }
+  },
+  created(){
+    this.initYear()
+  },
+  methods:{
+    initYear(){
+      const date = new Date();
+      this.year = date.getFullYear();
+    }
+  }
+}
 </script>
 <style></style>
 
