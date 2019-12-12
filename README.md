@@ -24,7 +24,7 @@ Pinghsu是一款以前端性能优化为出发点而制作的Typecho主题，而
 Vue | 前端框架 | [https://vuejs.org/](https://vuejs.org/)
 Vue-router | 路由框架 | [https://router.vuejs.org/](https://router.vuejs.org/)
 vue-meta | 管理HMTL头部标签 |[https://github.com/nuxt/vue-meta](https://github.com/nuxt/vue-meta)
-Axios | 前端HTTP框架 | [https://github.com/axios/axios](https://github.com/axios/axios)
+Axios | 异步HTTP请求 | [https://github.com/axios/axios](https://github.com/axios/axios)
 nprogress | 进度条控件 | [https://github.com/rstacruz/nprogress](https://github.com/rstacruz/nprogress)
 headroom | 隐藏或展现页面上的元素 |[https://www.bootcss.com/p/headroom.js/](https://www.bootcss.com/p/headroom.js/)
 identicon | 哈希头像生成器 |[https://github.com/stewartlord/identicon.js](https://github.com/stewartlord/identicon.js)

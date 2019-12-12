@@ -9,7 +9,7 @@
           <!-- 单个文章显示开始-->
           <div class="post-list-item" v-for="(article,index) in item" :key="index" >
             <div class="post-list-item-container">
-              <div class="item-thumb bg-deepgrey" :style="{ 'background': 'url(' + article.imageCover + ')','background-size':'100%'}"></div>
+              <div class="item-thumb bg-deepgrey" :style="getThumbs(article.imageCover,index)"></div>
               <router-link :to="{'path':'/article/'+article.id}">
                 <div class="item-desc">
                   <p>{{article.slug}}</p>
@@ -22,7 +22,11 @@
                   <router-link :to="{'path':'/article/'+article.id}">{{article.title}}</router-link>
                 </div>
                 <div class="item-meta clearfix">
-                  <div class="item-meta-ico bg-ico-code" style="background: url(../../../static/img/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                  <div
+                  class="item-meta-ico" 
+                  :class="getTag(article.cname)" 
+                  style="background: url(../../../static/img/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                  
                   <div class="item-meta-cat"><router-link :to="{'path':'/category/'+article.category}">{{article.cname}}</router-link></div>
                 </div>
               </div>
@@ -66,7 +70,7 @@
     },
 
     methods: {
-
+      //获取数据
       fetchData(page) {
         this.listLoading = true;
         getitem(page).then(response => {
@@ -78,6 +82,18 @@
           this.listLoading = false
         })
       },
+      // 设置文章图片
+      getThumbs(image,index){
+        if(image !== null && image !== ""){
+          return "background:url("+ image + ");background-size:100%;";
+        }else{
+          return "background:url(../../../static/img/thumbs/" + index + ".jpg);background-size:100%;";
+        }
+      },
+      //设置文章标签
+      getTag(cname){
+        return "bg-ico-"+ cname;
+      }
     }
   }
 

@@ -39,10 +39,10 @@
     <div class="bottom-bar-inner">
       <div  class="bottom-bar-items right">
 				<span   class="bottom-bar-item">
-				  <a v-if="up.id !=='#'" :href="'/article/'+up.id" :title="up.title">←</a>
+				  <a v-if="up.id !=='#'" :href="'/article/'+up.id" :title="up.title">→</a>
 				</span>
         <span  class="bottom-bar-item">
-					<a v-if="down.id !== '#'" :href="'/article/'+down.id" :title="down.title">→</a>
+					<a v-if="down.id !== '#'" :href="'/article/'+down.id" :title="down.title">←</a>
 				</span>
         <span class="bottom-bar-item">
 					<a @click="toBottom(50)">↓</a>
