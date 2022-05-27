@@ -55,11 +55,6 @@ const routes = [
         path: '/search',
         component: () => import('@/views/search'),
         meta: { title: '文章搜索 - HTwoKey' }
-      },
-      {
-        path: '/sudoku',
-        component: () => import('@/views/sudoku'),
-        meta: { title: '数独 - HTwoKey' }
       }]
   },
   { path: '/error', component: () => import('@/views/error/500'), meta: { title: '服务器错误' }},
