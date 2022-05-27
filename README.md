@@ -3,11 +3,10 @@
 ## 项目介绍
 Pinghsu是一款以前端性能优化为出发点而制作的Typecho主题，而Pinghsu-Vue是基于这款主题的[vue](https://github.com/vuejs/vue)版本，基本实现了原主题的大部分功能，还添加了一些其它的功能。
 
-- [在线预览](https://htwokey.com)
-
 - [Pinghsu](https://www.linpx.com)
 
 - [Pinghsu - GitHub](https://github.com/chakhsu/pinghsu)
+
 
 **目前版本为 `v1.0+` 基于 `vue-cli` 进行构建，若发现问题，欢迎提[issue]()。**
 
